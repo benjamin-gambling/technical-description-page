@@ -1,0 +1,158 @@
+:root {
+  --color-text: #21252e;
+  --color-code: #f0f1f4;
+  --color-code-background: #21252e;
+  --color-background: #f0f1f4;
+}
+
+
+html,
+body,
+p {
+  min-width: 300px;
+  color:var(--color-text);
+  font-size: 1rem;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.1;
+  background-color: var(--color-background);
+  text-align: justify;
+ 
+  
+}
+
+p {
+ font-size: 1rem; 
+ margin: 0px 0px 30px 15px;
+}
+
+li {
+ list-style: none; 
+}
+
+
+#navbar {
+  position: fixed;
+  min-width: 290px;
+  font-weight: 550;
+  top: 0px;
+  left: 0px;
+  width: auto;
+  height: 100%;
+  border-right: solid;
+  border-left: solid;
+  border-color: var(--color-text);
+  z-index: 1;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+header {
+  color: var(--color-text);
+  margin-top: 100px;
+  margin: 20px;
+  text-align: center;
+  font-weight: 550;
+  font-size:2rem;
+  
+}
+
+#main-doc header {
+  text-align: left;
+  margin: 50px 0px 25px 15px;
+  text-decoration: underline;
+  
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  color: var(--color-text);
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: var(--color-text);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#main-doc {
+  position: relative;
+  margin-left: 325px;
+  padding: 20px;
+  margin-bottom: 110px;
+}
+
+h2 {
+  color: var(--color-text);
+  margin: 50px 0px 0px 15px;
+  font-size: 1.5rem;
+}
+
+section li {
+  margin: 15px 0px 0px 20px;
+}
+
+code {
+  font-size:1.2rem;
+  width: 950px;
+  display: block;
+  text-align: left;
+  white-space: pre;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  background-color: var(--color-code-background);
+  color: var(--color-code);
+  padding: 0px;
+  margin: 20px 0px 0px 0px;
+  border-radius: 1px;
+}
+
+@media only screen and (max-width: 815px) {
+  /* For mobile phones: */
+  #navbar ul {
+    border: 2px solid;
+    height: 207px;
+  }
+
+  #navbar {
+    position: fixed;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 285px;
+    z-index: 1;
+    border-bottom: 1px solid;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 240px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #main-doc {
+    margin-left: 0px;
+  }
+
+  code {
+    margin-left: -20px;
+    font-size:1rem;
+    width: 750px;
+  }
+}
