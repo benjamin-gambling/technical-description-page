@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<nav id="navbar">
+  <header>HTML Cheat Sheet</header>
+  <ul>
+    <li><a class="nav-link" href="#HTML_Introduction">HTML Introduction</a></li>
+    <li><a class="nav-link" href="#Document_Summary">Document Summary</a></li>
+    <li><a class="nav-link" href="#Document_Information">Document Information</a></li>
+    <li><a class="nav-link" href="#Document_Structure">Document Structure</a></li>
+    <li><a class="nav-link" href="#Text_Formatting">Text Formatting</a></li>
+    <li><a class="nav-link" href="#Links">Links</a></li>
+    <li><a class="nav-link" href="#Images">Images</a></li>
+    <li><a class="nav-link" href="#Lists">Lists</a></li>
+    <li><a class="nav-link" href="#Forms">Forms </a></li>
+    <li><a class="nav-link" href="#Tables">Tables</a></li>
+    <li><a class="nav-link" href="#Objects_and_iFrames">Objects and iFrames</a></li>
+    <li><a class="nav-link" href="#HTML5_New_Tags">HTML5 New Tags</a></li>
+    <li><a class="nav-link" href="#Collective_Character_Objects">Collective Character Objects</a></li>
+    <li><a class="nav-link" href="#Reference">Reference</a></li>
+  </ul>
+</nav>
+
+<main id="main-doc">
+  <section class="main-section" id="HTML_Introduction">
+    <header>HTML Introduction</header>
+    <article>
+      <p>HTML stands for Hyper Text Markup Language. It is used to design web pages using markup language. HTML is the combination of Hypertext and Markup language. Hypertext defines the link between the web pages. Markup language is used to define the text document within tag which defines the structure of web pages. This language is used to annotate (make notes for the computer) text so that a machine can understand it and manipulate text accordingly. Most of markup (e.g. HTML) languages are human readable. Language uses tags to define what manipulation has to be done on the text.</p>
+      <p>HTML is a markup language which is used by the browser to manipulate text, images and other content to display it in required format. HTML was created by Tim Berners-Lee in 1991. The first ever version of HTML was HTML 1.0 but the first standard version was HTML 2.0 which was published in 1999. The latest version of HTML is HTML 5 which was released in 2014</p>
+      <p>HTML uses predefined tags and elements which tells the browser about content display property. If a tag is not closed then browser applies that effect till end of page.An example of what these looks like is shown below: - </p>
+      <code><xmp>
+        <b>example</b>
+      </xmp></code>
+    </article>
+  </section>
+  <section class="main-section" id="Document_Summary">
+    <header>Document Summary</header>
+    <article>
+      <code><xmp>
+       <DOCTYPE! html>
+          </xmp></code>
+          <p>This tag is used to tells the HTML version. This currently tells that the version is HTML 5.</p>
+      <code><xmp>
+       <html> … </html>
+      </xmp></code>
+      <p>The tag shows up at the beginning and end of an HTML document (known as the root element). It indicates that the webpage is written in HTML5, and all other page markup comes in between these beginning and ending tags.</p>
+     <code><xmp>
+      <head> … </head>
+     </xmp></code> 
+      <p>The contains information that specific page, including the title tags, meta data, and links to scripts and style sheets.</p>
+    <code><xmp>
+      <title> … </title>
+    </xmp></code>
+      <p>The title tag is the title for that page, useful for both search engines (when they scan and index pages) and users (showing up up in a browser’s title bar) by explicitly stating the primary topic of each page.</p>
+    <code><xmp>
+      <body> … </body>
+    </xmp></code>
+      <p>Body tags include all content that will be shown to users, including everything they’ll see & read. 
+      <h2>Example</h2>
+  <code><xmp>
+    <DOCTYPE! html>
+     <html>
+      <head>
+        <title>My Beautiful Website</title>
+      </head>
+      <body>
+
+      </body>
+    </html>
+  </xmp></code>
+    </article>
+  </section>
+  <section class="main-section" id="Document_Information">
+    <header>Document Information</header>
+    <article>
+      <code><xmp>
+        <base/>
+        </xmp></code>
+<p>The Base URL (for example: www.YourSite.com) is useful for specifying all relative links in a document (especially if you have many internal links).</p>
+      <code><xmp>
+        <meta/>
+        </xmp></code>
+<p>Meta data spells out additional information about the page, including the page’s description, author, published date, keywords and other typically ‘hidden’ page information.</p>
+      <code><xmp>
+        <link/>
+        </xmp></code>
+      <p>Can be used to a create relationships with external pages or documents, including style sheets.</p>
+      <code><xmp>
+        <style> … </style>
+        </xmp></code>
+      <p>This element includes document style information, typically defaulting to CSS.</p>
+      <code><xmp>
+        <script> … </script>
+        </xmp></code>
+      <p>This element includes all scripting information, or links to external scripts. You can also include this element in the body to dynamically generate content.</p>
+      <h2>Example</h2>
+       <code><xmp>
+        <html>
+          <head>
+            <meta charset="utf-8">
+            <base href="http://mybeautifulwebsite.com" target="_blank" />
+             <title>My Beautiful Website</title>
+             <link rel="stylesheet" href="/css/master.css">
+            
+             <script type="text/javascript">
+                var MyVar = 0;
+             </script>
+          </head>
+          <body>
+
+          </body>
+        </html>
+         </xmp></code>
+    </article>
+  </section>
+  <section class="main-section" id="Document_Structure">
+    <header>Document Structure</header>
+    <article>
+        <code><xmp>
+          <h1..h6> … </h1..h6>
+          </xmp></code>
+      <p>All six levels of Headings, with 1 being the most important on a page and 6 being the least. These elements are used to describe content sections on a page.</p>
+        <code><xmp>
+          <div> … </div>
+          </xmp></code>
+      <p>A generic container used to denote a page section or block.</p>
+        <code><xmp>
+          <span> … </span>
+          </xmp></code>
+      <p>An inline section or block container, typically used for grouping styling elements.</p>
+         <code><xmp>
+           <p> … </p>
+           </xmp></code>
+      <p>This foundational tag is used to organize paragraphs of text.</p>
+         <code><xmp>
+           <br/>
+           </xmp></code>
+      <p>Creates a line break (or old-school carriage-return), useful for writing blocks of text that need to be on different lines (think addresses, etc.)</p>
+          <code><xmp>
+            <hr/>
+            </xmp></code>
+      <p>Creates a horizontal rule, a sectional break in an HTML page. Typically used to denote a change in topic or section of a page.</p>
+            <h2>Example</h2>
+         <code><xmp>
+           <div>
+             <h1>Ways to make your cat happy</h1>
+             <p>You have a <span>mini-lion</span> at home and you want to make it as happy as
+               possible.</p>
+             <hr/>
+             <h2>Feed your cat well.</h2>
+             <p>The right diet is <span>extremely</span> important for the wellbeing of your
+               cat.<br/> Obesity is a common source of problems among domesticated animals.</p> 
+           </div>
+      </xmp></code>
+    </article>
+  </section>
+  <section class="main-section" id="Text_Formatting">
+    <header>Text Formatting</header>
+    <code><xmp>
+      <strong> … </strong>
+      </xmp></code>
+    <p>Exactly like it sounds, indicating STRONG emphasis, displayed bold in most browsers.</p>
+    <code><xmp>
+      <b> … </b>
+      </xmp></code>
+    <p>Another way to create bold text, however it’s more for drawing attention as opposed to emphasizing extra emphasis like the previous tag.</p>
+    <code><xmp>
+      <em> … </em>
+      </xmp></code>
+    <p>The emphasis tags also are like they sound, emphasizing text or phrases displayed as italics in most browsers.</p>
+   <code><xmp>
+     <i> … </i>
+     </xmp></code>
+    <p>Another way to add italics to text, however without the added emphasis (similar to the bold tags above) and instead used to denote things like thoughts or names.</p>
+    <code><xmp>
+      <tt> … </tt>
+      </xmp></code>
+    <p>An older tag used to display fixed-width, typewriter-esque text. No longer supported in HTML5.</p>
+    <code><xmp>
+      <strike> … </strike>
+      </xmp></code>
+    <p>This tag creates strike through text (or text with a line through it). Another older tag not commonly supported.</p>
+    <code><xmp>
+      <cite> … </cite>
+      </xmp></code>
+    <p>Tags used to cite or reference information, useful for quotes and statements in a document.</p>
+    <code><xmp>
+      <pre> … </pre>
+      </xmp></code>
+  <p>Pre-formatted, ‘monospace’ text laid out with whitespace inside the element intact.</p>
+    <code><xmp>
+      <del> … </del>
+      </xmp></code>
+  <p>Helps denote a previously deleted section of text.</p>
+    <code><xmp>
+      <ins> … </ins>
+      </xmp></code>
+  <p>Represents a section of text that’s been inserted into the document.</p>
+    <code><xmp>
+      <blockquote> … </blockquote>
+      </xmp></code>
+   <p>Reserved for long paragraphs of quotations, often cited.</p>
+    <code><xmp>
+      <q> … </q>
+      </xmp></code>
+  <p>These are used for shorter quotations.</p>
+    <code><xmp>
+      <abbr> … </abbr>
+      </xmp></code>
+  <p>Abbreviation These help denote abbreviations, while also making the full form available.</p>
+    <code><xmp>
+      <acronym> … </acronym>
+      </xmp></code>
+   <p>Acronym text Similar to the previous abbreviation tag, but this time with acronyms. Not support in HTML5.</p>
+    <code><xmp>
+      <address> … </address>
+      </xmp></code>
+  <p> A helpfully obvious tag that displays the author’s contact information.</p>
+    <code><xmp>
+      <dfn> … </dfn>
+      </xmp></code>
+  <p> Definition Used to create an inline definition in the body text.</p>
+    <code><xmp>
+      <code> … </code>
+      </xmp></code>
+    <p>Code text Displays code snippets (like the one over to the left), typically showing up monospaced.</p>
+    <code><xmp>
+      <font> … </font>
+      </xmp></code>
+  <p> Font tag Old-school way to colour fonts. No longer part of HTML5.</p>
+    <code><xmp>
+      <sub> … </sub>
+      </xmp></code>
+    <p>Subscript text A helpful way to subscript text (shrinking it and placing it a half line lower than the previous text).</p>
+    <code><xmp>
+      <sup> … </sup>
+      </xmp></code>
+    <p>Superscript text Similar to the previous subscript, however this time placing it a half line higher than the previous text.</p>
+    <code><xmp>
+      <small> … </small>
+      </xmp></code>
+    <p>Small size text Historically used to simply reduce text size, in HTML5 it also refers to information that may no longer be valid, accurate or relevant.</p>
+    <code><xmp>
+      <bdo> … </bdo>
+      </xmp></code>
+    <p>The bi-directional override tag will identify which should text should be read opposite from the preceeding text.</p>
+    <h2>Example</h2>
+    <code><xmp>
+      <p><strong>Keep your cat healthy.</strong> Felines can catch a <em>variety of
+        illnesses</em> outside and inside the house. It is important to bring your cat to the
+        veterinarian at least <strike>one</strike> two times a year for a check-up.</p>
+      
+      <blockquote>
+        Your cat should be neutered to prevent unwanted babies and lower the risks of feline
+        HIV.
+        <cite>- Dr. Tac Nam. Cat Professor</cite>
+        
+      </blockquote>
+      <pre>
+      This is a preformatted text which is a block type element.
+      </pre>
+      <p>While this line has a <code>code tag</code> in it, codes that can be embedded
+      inline</p>
+     </xmp></code>
+  </section>
+  <section class="main-section" id="Links">
+    <header>Links</header>
+    <article>
+      <code><xmp>
+        <a href=””> … </a>
+        </xmp></code>
+      <p>Anchor text for hyperlink.</p>
+      <code><xmp>
+        <a href=”mailto:”> … </a>
+        </xmp></code>
+      <p>A link used to pull up an outgoing message to a specific email addresses.</p>
+      <code><xmp>
+        <a href=”tel://###-###”> … </a>
+        </xmp></code>
+      <p>A link to make phone numbers clickable, especially useful for mobile users.</p>
+      <code><xmp>
+        <a name=”name”> … </a>
+        </xmp></code>
+      <p>An anchor that’s useful for bringing users to specific document elements.</p>
+      <code><xmp>
+        <a href=”#name”> … </a>
+        </xmp></code>
+      <p>An anchor link that brings users specifically to a div element.</p>
+    </article>
+  </section>
+  <section class="main-section" id="Images">
+    <header>Images</header>
+    <article>
+      <code><xmp>
+        <img />
+        </xmp></code>
+      <p>An image tag to include and display image files.</p>
+      <code><xmp>
+        src=”url”
+        </xmp></code>
+      <p>Exactly like it sounds. The URL or file of the image to display.</p>
+      <code><xmp>
+        alt=”text”
+        </xmp></code>
+      <p>Alternative text that helps explain the image content to both search engines and users.</p>
+      <code><xmp>
+        height=””
+        </xmp></code>
+      <p>The ability to specify image height in pixels or percentages.</p>
+      <code><xmp>
+        width=””
+        </xmp></code>
+      <p>The ability to specify width in pixels or percentages.</p>
+      <code><xmp>
+        align=””
+        </xmp></code>
+      <p>The alignment of the image (relative to other text elements on the page).</p>
+      <code><xmp>
+        border=””
+        </xmp></code>
+      <p>Explains the border thickness (if any).</p>
+      <code><xmp>
+        vspace=””
+        </xmp></code>
+      <p>Denote spacing on top or the bottom of image.</p>
+      <code><xmp>
+        hspace=””
+        </xmp></code>
+      <p>Denote spacing on top or the bottom of image.</p>
+      <code><xmp>
+        <map> … </map>
+        </xmp></code>
+      <p>Helps you tell users that this is an interactive image with clickable areas.</p>
+      <code><xmp>
+        <map name=””> … </map>
+        </xmp></code>
+      <p>Name of the map associated between the image and the map.</p>
+      <code><xmp>
+        <area />
+        </xmp></code>
+      <p>Specify the area of image map.<p>
+      <h2>Example</h2>
+      <code><xmp>
+        <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+        
+        <map name="planetmap">
+          <area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun">
+          <area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury">
+          <area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus">
+        </map>
+        </xmp></code>
+    </article>
+  </section>
+  <section class="main-section" id="Lists">
+    <header>Lists</header>
+    <article>
+        <code><xmp>
+          <ol> … </ol>
+          </xmp></code>
+      <p>Create numbered (ordered) lists showing sequential order, preference or priority.</p>
+        <code><xmp>
+          <ul> … </ul>
+          </xmp></code>
+      <p>Display a bulleted (unordered) list without any extra emphasis on order of importance.</p>
+        <code><xmp>
+          <li> … </li>
+          </xmp></code>
+      <p>Specifies each list item to be bulleted or numbered.</p>
+        <code><xmp>
+          <dl> … </dl>
+          </xmp></code>
+      <p>Reserved specifically for list items definitions.</p>
+        <code><xmp>
+          <dt> … </dt>
+          </xmp></code>
+      <p>The definition of a single term inline with body content.</p>
+        <code><xmp>
+          <dd> … </dd>
+          </xmp></code>
+      <p>The description for the defined term.</p>
+      <h2>Example</h2>
+       <code><xmp>
+        <ol>
+           <li>January</li>
+           <li>February</li>
+           <li>March</li>
+        </ol>
+        <ul>
+          <li>Tomato</li>
+          <li>Lettuce</li>
+          <li>Cheese</li>
+        </ul>
+        <dl>
+          <dt>Coffee</dt>
+          <dd>Black hot drink</dd>
+          <dt>Milk</dt>
+          <dd>White cold drink</dd>
+        </dl>
+         </xmp></code>
+      </article>
+  </section>
+  <section class="main-section" id="Forms">
+    <header>Forms</header>
+    <article>
+          <code><xmp>
+            <form> … </form>
+            </xmp></code>
+          <p>The form element creates a form, spelling out how the form will operate based on it’s attributes.</p>
+          <code><xmp>
+            action=”url”
+            </xmp></code>
+          <p>The form action URL specifies where data is to be sent when a site visitor submits the form.</p>
+          <code><xmp>
+            method=””
+            </xmp></code>
+            <p>The method attribute refers to the HTTP method (Get, Post), which dictates how to send the form data.</p>
+          <code><xmp>
+            enctype=””
+            </xmp></code>
+            <p>This attribute dictates how the form-data is to be enconded when submitting information back to the web sever (for method=”post” only).</p>
+          <code><xmp>
+            autocomplete
+            </xmp></code>
+            <p>Dictates whether a form should have autocomplete on or off.</p>
+          <code><xmp>
+            novalidate
+            </xmp></code>
+            <p>Dictates whether the form should not be validated when submitted.</p>
+          <code><xmp>
+            accept-charsets
+            </xmp></code>
+            <p>Identifies the character encodings upon the form submission.</p>
+          <code><xmp>
+            target
+            </xmp></code>
+          <p>Tells where to display the form response after being submitted, generally one of the following:_blank, _self, _parent, _top</p>
+          <code><xmp>
+            <fieldset> … </fieldset>
+            </xmp></code>
+            <p>Identifies the group of all fields on the form.</p>
+          <code><xmp>
+            <label> … </label>
+            </xmp></code>
+            <p>A simple field label, telling the user what to enter in each field.</p>
+          <code><xmp>
+            <legend> … </legend>
+            </xmp></code>
+            <p>The form legend acts as a caption for the fieldset element.</p>
+          <code><xmp>
+            <input />
+            </xmp></code>
+           <p>The form input attribute defines the type of field information to receive from a user.</p>
+            <h2>Input type attributes</h2>
+          <code><xmp>
+            type=””
+            </xmp></code>
+          <p>Specifies the field input type, typically including text, password, date-time, checkbox, password submit etc.</p>
+          <code><xmp>
+            name=””
+            </xmp></code>
+            <p>Describes the name of the form.</p>
+          <code><xmp>
+            value=””
+            </xmp></code>
+            <p>Describes the value or input field information.</p>
+          <code><xmp>
+            size=””
+            </xmp></code>
+            <p>Specifies the input element width in characters.</p>
+          <code><xmp>
+            maxlength=””
+            </xmp></code>
+            <p>Identifies the maximum input element character numbers allowed.</p>
+          <code><xmp>
+            required
+            </xmp></code>
+            <p>Another helpfully explicit tag, making sure the input element is completely filled out prior to the user submitting the form.</p>
+          <code><xmp>
+            step=””
+            </xmp></code>
+            <p>Identifies the legal number intervals for an input field.</p>
+          <code><xmp>
+            width=””
+            </xmp></code>
+            <p>Specifies the width (in pixels) of an input element.</p>
+          <code><xmp>
+            height=””
+            </xmp></code>
+            <p>Dictates the height (again, in pixels) of an input element.</p>
+          <code><xmp>
+            placeholder=””
+            </xmp></code>
+             <p>Provides a helpful hint to the user, describing what the input element value should be.</p> 
+          <code><xmp>
+            pattern=””
+            </xmp></code>
+            <p>Identifies a regular expression that the input element gets checked against, making sure the user entered the correct information.</p>
+          <code><xmp>
+            min=””
+            </xmp></code>
+            <p>The minimum value allowed for each input element.</p>
+          <code><xmp>
+            max=””
+            </xmp></code>
+            <p>The maximum value allowed for each input element.</p>
+          <code><xmp>
+            autofocus
+            </xmp></code>
+            <p>Says to make sure that the input element comes into focus after the page loads.</p>
+          <code><xmp>
+            disabled
+            </xmp></code>
+            <p>Disables an input element on the form.</p>
+          <code><xmp>
+            <textarea> … </textarea>
+            </xmp></code>
+            <p>Specifies a large text input for longer messages.</p>
+          <code><xmp>
+            <select> … </select>
+            </xmp></code>
+            <p>Describes a drop-down box for user’s to select one from a variety of options.</p>
+            <h2>Select attributes</h2>
+          <code><xmp>
+            name=””
+            </xmp></code>
+            <p>The name for a drop down combination box.</p>
+          <code><xmp>
+            size=””
+            </xmp></code>
+            <p>Specifies the number of available, visible options in a drop-down.</p>
+          <code><xmp>
+            multiple
+            </xmp></code>
+            <p>Allows for multiple selections to be made at one time.</p>
+          <code><xmp>
+            required
+            </xmp></code>
+            <p>Requires that a value is selected before a user can submit a form.</p>
+          <code><xmp>
+            autofocus
+            </xmp></code>
+            <p>Specifies that a drop-down list automatically comes into focus after a page loads.</p>
+          <code><xmp>
+            <optgroup> … </optgroup>
+            </xmp></code>
+            <p>Specifies the entire grouping of available options.</p>
+          <code><xmp>
+            <option> … </option>
+            </xmp></code>
+            <p>Defines one of the available options in the drop-down list.</p>
+            <h2>Option attributes</h2>
+          <code><xmp>
+            value=””
+            </xmp></code>
+            <p>Explains the option value available for selection.</p>
+          <code><xmp>
+            selected
+            </xmp></code>
+            <p>Defines the default selected option for users.</p>
+          <code><xmp>
+            <button> … </button>
+            </xmp></code>
+            <p>Defines the clickable button for users to submit options.</p>
+            <h2>Example</h2>
+          <code><xmp>
+            <form action="action_page.php" method="post">
+              <fieldset>
+                <legend>Personal information:</legend>
+                First name:<br>
+                <input type="text" name="firstname" value="Mickey" placeholder="First Name"><br>
+                Last name:<br>
+                <input type="text" name="lastname" value="Mouse" placeholder="Last Name"><br><br>
+                Favorite car brand:<br>
+                <select>
+                  <option value="volvo">Volvo</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+                </select>
+                <textarea name="description"></textarea>
+                <input type="submit" value="Submit">
+             </fieldset>
+          </form>
+        </xmp></code>
+    </article>
+  </section>
+  <section class="main-section" id="Tables">
+    <header>Tables</header>
+    <article>
+            <code><xmp>
+              <table> … </table>
+              </xmp></code>
+              <p>The table tag identifies and contains all table related content.</p>
+            <code><xmp>
+              <caption> … </caption>
+              </xmp></code>
+              <p> The caption is a description of what the table is, and what it contains.</p>
+            <code><xmp>
+              <thead> … </thead>
+              </xmp></code>
+            <p>The table headers describe the type of information contained in each column underneath.</p>
+            <code><xmp>
+              <tbody> … </tbody>
+              </xmp></code>
+              <p>The table body contains the table’s data or information.</p>
+            <code><xmp>
+              <tfoot> … </tfoot>
+              </xmp></code>
+              <p>Table footers describe all footer content.</p>
+            <code><xmp>
+              <tr> … </tr>
+              </xmp></code>
+              <p>Contains the information to be included in a single row of the table.</p>
+            <code><xmp>
+              <th> … </th>
+              </xmp></code>
+              <p>Contains the actual information or data in a single header item.</p>
+            <code><xmp>
+              <td> … </td>
+              </xmp></code>
+              <p>Contains the actual information or data in a single table cell.</p>
+            <code><xmp>
+              <colgroup> … </colgroup>
+              </xmp></code>
+              <p>Groups a single (or multiple) columns for formatting purposes.</p>
+            <code><xmp>
+              <col />
+              </xmp></code>
+              <p>Defines a single column of information inside a table.</p>
+              <h2>Example</h2>
+            <code><xmp>
+              <table>
+                <colgroup>
+                   <col span="2" style="background-color:#181a1f">
+                   <col style="background-color:#2c323c">
+                </colgroup>
+                <tr>
+                   <th>ISBN</th>
+                   <th>Title</th>
+                   <th>Price</th>
+                </tr>
+                <tr>
+                   <td>3476896</td>
+                   <td>My first HTML</td>
+                   <td>$53</td> 
+                </tr>
+                <tr>
+                   <td>5869207</td>
+                   <td>My first CSS</td>
+                   <td>$49</td>
+                </tr>
+              </table>
+           </xmp></code>
+    </article>
+  </section>
+  <section class="main-section" id="Objects_and_iFrames">
+    <header>Objects and iFrames</header>
+    <article>
+        <code><xmp>
+          <object> … </object>
+          </xmp></code>
+        <p>The object tag describes an embedded file type, including audio, video, PDFs, additional pages, and more.</p>
+        <code><xmp>
+          height=””
+          </xmp></code>
+          <p>Describes the height of the object in pixels.</p>
+        <code><xmp>
+          width=””
+          </xmp></code>
+          <p>Describes the width of the object in pixels.</p>
+        <code><xmp>
+          type=””
+          </xmp></code>
+          <p>Describes which media type the data contains.</p>
+        <code><xmp>
+          usemap=””
+          </xmp></code>
+          <p>This is the name of a client-side image map within <object>.</p>
+        <code><xmp>
+          <iframe> … </iframe>
+          </xmp></code>
+        <p>Contains an inline frame that allows you to embed external information into an existing document.</p>
+          <h2>iFrame attributes</h2>
+        <code><xmp>
+          name=””
+          </xmp></code>
+          <li>The name of the iframe.</li>
+        <code><xmp>
+          src=””
+          </xmp></code>
+          <li>The URL source of the original document to embed inside the iframe.</li>
+        <code><xmp>
+          srcdoc=””
+          </xmp></code>
+      <li>This contains the actual HTML content to display inside the iframe</li>
+        <code><xmp>
+          width=””
+          </xmp></code>
+          <li>Defines the width of your iframe.</li>
+        <code><xmp>
+          <param />
+          </xmp></code>
+          <li>Appending extra parameters help you customize the iframe content.</li>
+        <code><xmp>
+          <embed> … </embed>
+          </xmp></code>
+        <li>The embed tag acts as a container for another external application or additional plug-in.</>
+          <h2>Embed attributes</h2>
+        <code><xmp>
+          height=””
+          </xmp></code>
+          <p>Defines the height of the embedded content you’re including.</p>
+        <code><xmp>
+          width=””
+          </xmp></code>
+          <p>Similar to previous, but this time defining the width of the embedded content.</p>
+        <code><xmp>
+          src=””
+          </xmp></code>
+          <p>The source URL of the external file you’re embedding.</p>
+        <code><xmp>
+          type=””
+          </xmp></code>
+          <p>Describes the media type of embedded content to include.</p>
+          <h2>Example</h2>
+          <code><xmp>
+            <object width="400" height="400"></object>
+            <iframe src="demo_iframe.htm" width="200" height="200"></iframe>
+            <embed src="helloworld.swf" width="200" height="200"></embed>
+          </xmp></code>                                                     
+    </article>
+  </section>
+  <section class="main-section" id="HTML5_New_Tags">
+    <header>HTML5 New Tags</header>
+    <article>
+        <code><xmp>
+          <header> … </header>
+          </xmp></code>
+          <p>Defines the header block for a document (or individual section).</p>
+        <code><xmp>
+          <footer> … </footer>
+          </xmp></code>
+          <p>Identifies the footer block for the document (or an individual section).</p>
+        <code><xmp>
+          <main> … </main>
+          </xmp></code>
+          <p>Describes the main content of a document.</p>
+        <code><xmp>
+          <article> … </article>
+          </xmp></code>
+          <p>Identifies an article inside a document.</p>
+        <code><xmp>
+          <aside> … </aside>
+          </xmp></code>
+          <p>Specifies content contained in a document sidebar.</p>
+        <code><xmp>
+          <section> … </section>
+          </xmp></code>
+          <p>Specifies a section block in the document.</p>
+        <code><xmp>
+          <details> … </details>
+          </xmp></code>
+          <p>Describes additional facts or information that the user can view or hide.</p>
+        <code><xmp>
+          <dialog> … </dialog>
+          </xmp></code>
+          <p>A dialog box or window.</p>
+        <code><xmp>
+          <figcaption> … </figcaption>
+          </xmp></code>
+          <p>The<code><xmp><figure></xmp></code>element caption that helps describes the figure.</p>
+        <code><xmp>
+            <figure> … </figure>
+          </xmp></code>
+          <p>An independent content block featuring diagrams, photos, illustrations or more.</p>
+        <code><xmp>
+          <mark> … </mark>
+          </xmp></code>
+          <p>Displays a portion of highlighted text within the page content.</p>
+        <code><xmp>
+          <nav> … </nav>
+          </xmp></code>
+          <p>Navigation links for the user in a document.</p>
+        <code><xmp>
+          <menuitem> … </menuitem>
+          </xmp></code>
+          <p>The specific menu item that a user can raise from a popup menu.</p>
+        <code><xmp>
+          <meter> … </meter>
+          </xmp></code>
+          <p>Describes the scalar measurement within a known array.</p>
+        <code><xmp>
+          <progress> … </progress>
+          </xmp></code>
+          <p>Displays the progress of a task, usually used for progress bar.</p>
+        <code><xmp>
+          <rp> … </rp>
+          </xmp></code>
+          <p>Displays text within browsers that do not support ruby annotations.</p>
+        <code><xmp>
+          <rt> … </rt>
+          </xmp></code>
+          <p>Displays East Asian typography character details.</p>
+        <code><xmp>
+          <ruby> … </ruby>
+          </xmp></code>
+          <p>Describes a Ruby annotation for East Asian typography.</p>
+        <code><xmp>
+          <summary> … </summary>
+          </xmp></code>
+          <p>Contains a visible heading for a <xmp><details></xmp> element.</p>
+        <code><xmp>
+          <bdi> … </bdi>
+          </xmp></code>
+          <p>Helps you format part of text in a different direction from other text.</p>
+        <code><xmp>
+          <time> … </time>
+          </xmp></code>
+          <p>Identifies the time and date.</p>
+        <code><xmp>
+          <wbr>
+          </xmp></code>
+          <p>A line-break within the content</p>
+    </article>
+  </section>
+  <section class="main-section" id="Collective_Character_Objects">
+    <header>Collective Character Objects</header>
+    <article>
+      <code><xmp>
+        &#34; &quot; Quotation Marks - “
+        &#38; &amp; Ampersand - &
+        &#60; &lt; Less than sign - 
+        &#62; &gt; Greater than sign - >
+        &#160; &nbsp; Non-breaking space
+        &#169; &copy; Copyright symbol - ©
+        &#64; &Uuml; @ Symbol - @
+        &#149; &ouml; Small bullet - •
+        &#153; &ucirc; Trademark symbol - ™
+        </xmp></code>
+    </article>
+  </section>
+  <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <ul>
+          All the documentation in this page is taken from: -
+          <li><a href="https://hostingfacts.com/html-cheat-sheet/" target="_blank">HTML Cheat Sheet</a></li>
+          <li><a href="https://www.geeksforgeeks.org/html-introduction/" target="_blank">HTML Introduction</a></li>
+      </ul>
+    </article>
+  </section>
+</main>
+</body>
+</html>
